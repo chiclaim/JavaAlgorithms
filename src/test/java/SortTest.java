@@ -1,11 +1,8 @@
-import com.chiclaim.algorithms.sort.insertion_sort.InsertionSort;
+import com.chiclaim.algorithms.sort.insertion_sort.DirectionInsertionSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 /**
- *
  * @author chiclaim
  * <p></p>
  * created at 2011
@@ -15,10 +12,10 @@ public class SortTest {
 
 
     @Test
-    void testSort() {
-        int[] arr = new int[]{2, 0, 4, 1, 7, 9, 6};
-        new InsertionSort().sort(arr);
-        Assertions.assertArrayEquals(arr, new int[]{0, 1, 2, 4, 6, 7, 9});
+    void testDirectionInsertionSort() {
+        int[] arr = new int[]{2, 0, 4, 1, 7, 3, 6};
+        new DirectionInsertionSort().sort(arr);
+        Assertions.assertArrayEquals(arr, new int[]{0, 1, 2, 3, 4, 6, 7});
     }
 
 }

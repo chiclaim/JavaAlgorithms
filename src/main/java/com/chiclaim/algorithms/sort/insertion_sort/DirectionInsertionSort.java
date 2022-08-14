@@ -12,14 +12,18 @@ import com.chiclaim.algorithms.sort.ISort;
 public class DirectionInsertionSort implements ISort {
 
     public void sort(int[] arr) {
+        // 索引从 1 开始
         for (int i = 1; i < arr.length; i++) {
+            // 保存当前元素
             int current = arr[i];
             int j;
+            // 从后往前扫描
             for (j = i; j > 0; j--) {
+                // 如果当前的元素大于或等于前一个元素，则不需要腾位置
                 if (current >= arr[j - 1]) break;
                 arr[j] = arr[j - 1];
             }
-            // 将当前元素插入到合适的位置（如果 j==i 说明当前位置就是最终的位置）
+            // 将当前元素插入到腾出的位置（如果 j==i 说明前面的元素没有发生过挪动）
             if (j != i) arr[j] = current;
         }
     }

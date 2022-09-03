@@ -2,6 +2,8 @@ package com.chiclaim.algorithms.sort.insertion_sort;
 
 import com.chiclaim.algorithms.sort.ISort;
 
+import java.util.Arrays;
+
 /**
  * 直接插入排序
  *

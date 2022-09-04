@@ -2,8 +2,6 @@ package com.chiclaim.algorithms.sort.insertion_sort;
 
 import com.chiclaim.algorithms.sort.ISort;
 
-import java.util.Arrays;
-
 /**
  * 希尔排序
  *
@@ -28,7 +26,7 @@ public class ShellSort implements ISort {
     public void sort(int[] arr) {
         //初始 gap，默认设置为数组长度的一半
         for (int gap = arr.length / 2; gap > 0; gap /= 2) {
-            System.out.println("----gap=" + gap);
+            //System.out.println("----gap=" + gap);
             //从第 gap 个元素开始对相同的组进行直接插入排序操作
             for (int i = gap; i < arr.length; i++) {
                 int current = arr[i];

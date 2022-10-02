@@ -1,4 +1,5 @@
 import com.chiclaim.algorithms.sort.exchange_sort.BubbleSort;
+import com.chiclaim.algorithms.sort.exchange_sort.QuickSort;
 import com.chiclaim.algorithms.sort.insertion_sort.DirectionInsertionSort;
 import com.chiclaim.algorithms.sort.insertion_sort.ShellSort;
 import org.junit.jupiter.api.Assertions;
@@ -48,6 +49,17 @@ public class SortTest {
         int[] arr2 = Arrays.copyOf(arr, arr.length);
         Arrays.sort(arr2);
         new BubbleSort().sort(arr);
+        System.out.println(Arrays.toString(arr));
+        Assertions.assertArrayEquals(arr, arr2);
+    }
+
+
+    @Test
+    void testQuickSort() {
+        int[] arr = createIntArray(20);
+        int[] arr2 = Arrays.copyOf(arr, arr.length);
+        Arrays.sort(arr2);
+        new QuickSort().sort(arr);
         System.out.println(Arrays.toString(arr));
         Assertions.assertArrayEquals(arr, arr2);
     }

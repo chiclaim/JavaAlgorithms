@@ -2,6 +2,8 @@ import com.chiclaim.algorithms.sort.exchange_sort.BubbleSort;
 import com.chiclaim.algorithms.sort.exchange_sort.QuickSort;
 import com.chiclaim.algorithms.sort.insertion_sort.DirectionInsertionSort;
 import com.chiclaim.algorithms.sort.insertion_sort.ShellSort;
+import com.chiclaim.algorithms.sort.selection_sort.HeapSort;
+import com.chiclaim.algorithms.sort.selection_sort.HeapSort2;
 import com.chiclaim.algorithms.sort.selection_sort.StraightSelectionSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -74,5 +76,26 @@ public class SortTest {
         System.out.println(Arrays.toString(arr));
         Assertions.assertArrayEquals(arr, arr2);
     }
+
+    @Test
+    void testHeapSort() {
+        int[] arr = createIntArray(22);
+        int[] arr2 = Arrays.copyOf(arr, arr.length);
+        Arrays.sort(arr2);
+        new HeapSort().sort(arr);
+        System.out.println(Arrays.toString(arr));
+        Assertions.assertArrayEquals(arr, arr2);
+    }
+
+    @Test
+    void testHeapSort2() {
+        int[] arr = createIntArray(22);
+        int[] arr2 = Arrays.copyOf(arr, arr.length);
+        Arrays.sort(arr2);
+        new HeapSort2().sort(arr);
+        System.out.println(Arrays.toString(arr));
+        Assertions.assertArrayEquals(arr, arr2);
+    }
+
 
 }
